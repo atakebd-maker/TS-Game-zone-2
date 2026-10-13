@@ -1,0 +1,136 @@
+import { CategoryInfo } from '../types';
+
+export const CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'action',
+    name: 'Action Games',
+    description: 'Fast-paced challenges, reflex battles, and thrilling combat adventures.',
+    icon: 'Sword',
+  },
+  {
+    id: 'adventure',
+    name: 'Adventure Games',
+    description: 'Explore distant realms, overcome obstacles, and uncover hidden secrets.',
+    icon: 'Compass',
+  },
+  {
+    id: 'racing',
+    name: 'Racing Games',
+    description: 'High-speed speedways, drift tournaments, and adrenaline-charged circuits.',
+    icon: 'Gauge',
+  },
+  {
+    id: 'car',
+    name: 'Car Games',
+    description: 'Supercars, highway drag races, and precision vehicle simulation.',
+    icon: 'Car',
+  },
+  {
+    id: 'motorcycle',
+    name: 'Motorcycle Games',
+    description: 'Two-wheeled stunt courses, motocross trials, and dirt track balance.',
+    icon: 'Bike',
+  },
+  {
+    id: 'shooting',
+    name: 'Shooting Games',
+    description: 'Target practice, tactical space battles, and arcade blaster showdowns.',
+    icon: 'Crosshair',
+  },
+  {
+    id: 'puzzle',
+    name: 'Puzzle Games',
+    description: 'Logic challenges, matching grids, and spatial reasoning puzzles.',
+    icon: 'Puzzle',
+  },
+  {
+    id: 'brain',
+    name: 'Brain Games',
+    description: 'Memory training, rapid calculations, and cognitive workout puzzles.',
+    icon: 'Brain',
+  },
+  {
+    id: 'arcade',
+    name: 'Arcade Games',
+    description: 'Retro classics, high-score chasers, and legendary quarter-eater hits.',
+    icon: 'Gamepad2',
+  },
+  {
+    id: 'sports',
+    name: 'Sports Games',
+    description: 'Athletic competitions, championships, and stadium-packed action.',
+    icon: 'Trophy',
+  },
+  {
+    id: 'football',
+    name: 'Football Games',
+    description: 'Penalty kick tournaments, stadium shootouts, and tactical soccer drills.',
+    icon: 'Footprints',
+  },
+  {
+    id: 'basketball',
+    name: 'Basketball Games',
+    description: 'Three-point shootouts, slam dunks, and half-court buzzer beaters.',
+    icon: 'CircleDot',
+  },
+  {
+    id: 'strategy',
+    name: 'Strategy Games',
+    description: 'Tower defense command, tactical planning, and kingdom empire builders.',
+    icon: 'Target',
+  },
+  {
+    id: 'simulation',
+    name: 'Simulation Games',
+    description: 'Resource management, realm governance, and life decision simulators.',
+    icon: 'Sliders',
+  },
+  {
+    id: 'multiplayer',
+    name: 'Multiplayer Games',
+    description: 'Compete or cooperate with friends in real-time or turn-based matches.',
+    icon: 'Users',
+  },
+  {
+    id: 'multiplayer-casual',
+    name: 'Multiplayer Casual Games',
+    description: 'Quick-fire couch party games, pass-and-play pong, and friendly duels.',
+    icon: 'Sparkles',
+  },
+  {
+    id: 'board',
+    name: 'Board Games',
+    description: 'Grandmaster chess, checkmate puzzles, and table strategy classics.',
+    icon: 'Grid',
+  },
+  {
+    id: 'card',
+    name: 'Card Games',
+    description: 'Klondike Solitaire, trick-taking duels, and deck management mastery.',
+    icon: 'Layers',
+  },
+  {
+    id: 'kids',
+    name: 'Kids Games',
+    description: 'Family-friendly fun, vibrant colorful characters, and easy controls.',
+    icon: 'Smile',
+  },
+  {
+    id: 'educational',
+    name: 'Educational Games',
+    description: 'Math speed sprints, word search builders, and curiosity-driven trivia.',
+    icon: 'GraduationCap',
+  },
+  {
+    id: 'classic',
+    name: 'Classic Games',
+    description: 'Timeless favorites from the golden era of arcade and computer gaming.',
+    icon: 'History',
+  },
+  {
+    id: 'html5',
+    name: 'HTML5 Games',
+    description: 'Instant loading browser games with zero downloads or plugins needed.',
+    icon: 'Code2',
+  },
+];

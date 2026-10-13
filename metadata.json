@@ -1,0 +1,6 @@
+{
+  "name": "TS Game Zone",
+  "description": "TS Game Zone - Play 100% free online games, mobile games, action, racing, car stunts, puzzle, ludo, snake game and entertainment games anytime, anywhere with zero download.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
