@@ -130,6 +130,17 @@ class SoundController {
   public playSwish() {
     this.playTone(600, 'sine', 0.12, 0.18);
   }
+
+  public playPowerup() {
+    if (this.isMuted) return;
+    this.playTone(440, 'triangle', 0.08, 0.15);
+    setTimeout(() => this.playTone(554.37, 'triangle', 0.08, 0.15), 70);
+    setTimeout(() => this.playTone(659.25, 'triangle', 0.12, 0.2), 140);
+  }
+
+  public playVictory() {
+    this.playSuccess();
+  }
 }
 
 export const sound = new SoundController();

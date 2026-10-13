@@ -44,7 +44,8 @@ export type BuiltInEngineId =
   | 'word-quest'
   | 'kingdom-governor'
   | 'neon-pong'
-  | 'math-speed';
+  | 'math-speed'
+  | 'ludo-classic';
 
 export interface GameItem {
   id: string;

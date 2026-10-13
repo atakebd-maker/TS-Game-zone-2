@@ -103,6 +103,16 @@ export const Footer: React.FC<Props> = ({ brandName, onNavigatePage, onNavigateH
           </div>
         </div>
 
+        {/* SEO Search Keywords Cloud requested by user */}
+        <div className="py-6 border-b border-slate-800 text-[11px] text-slate-400 leading-relaxed">
+          <div className="text-slate-300 font-bold mb-2 uppercase tracking-wider text-xs">
+            Trending Searches & Keywords:
+          </div>
+          <p className="space-x-1.5 text-slate-400">
+            <span>Online games</span> · <span>free online games</span> · <span>best online games</span> · <span>games</span> · <span>video games</span> · <span>mobile games</span> · <span>free fire game</span> · <span>online free fire game</span> · <span>online free fire</span> · <span>online pubg</span> · <span>pubg</span> · <span>free fire</span> · <span>Minecraft</span> · <span>Minecraft mobile game</span> · <span>play free online games</span> · <span>online games free fire</span> · <span>online games for PC</span> · <span>boys game</span> · <span>girls game</span> · <span>online game paisa</span> · <span>play game</span> · <span>online game app</span> · <span>best online games for mobile</span> · <span>best online game Bangladesh</span> · <span>best online game India</span> · <span>United Kingdom game</span> · <span>United status game</span> · <span>online game ludo</span> · <span>online game site</span> · <span>free online game site</span> · <span>free entertainment online game</span> · <span>game game</span> · <span>online game</span> · <span>snake game</span> · <span className="font-bold text-blue-400">TS Game Zone</span> · <span className="font-bold text-blue-400">ts game zone</span>
+          </p>
+        </div>
+
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>

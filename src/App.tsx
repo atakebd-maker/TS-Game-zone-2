@@ -18,15 +18,23 @@ import {
   TermsPage,
   ResponsibleGamingPage,
 } from './components/pages/StaticPages';
+import { CoinRewardToast } from './components/common/CoinRewardToast';
 import { Sparkles, X } from 'lucide-react';
 
 export default function App() {
   const [games, setGames] = useState<GameItem[]>(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('novaplay_custom_games');
+      const saved = localStorage.getItem('ts_game_zone_custom_games') || localStorage.getItem('novaplay_custom_games');
       if (saved) {
         try {
-          return JSON.parse(saved);
+          const parsed: GameItem[] = JSON.parse(saved);
+          const initialMap = new Map(INITIAL_GAMES.map((g) => [g.id, g]));
+          const merged = INITIAL_GAMES.map((initGame) => {
+            const found = parsed.find((p) => p.id === initGame.id);
+            return found ? { ...initGame, ...found, thumbnail: initGame.thumbnail || found.thumbnail } : initGame;
+          });
+          const extraCustom = parsed.filter((p) => !initialMap.has(p.id));
+          return [...merged, ...extraCustom];
         } catch {}
       }
     }
@@ -369,6 +377,9 @@ export default function App() {
         onNavigatePage={handleNavigatePage}
         onNavigateHome={navigateToHome}
       />
+
+      {/* Real-time Coin Reward Notification Toast */}
+      <CoinRewardToast />
     </div>
   );
 }
