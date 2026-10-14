@@ -120,6 +120,40 @@ export default function App() {
       .catch(() => {});
   }, [games]);
 
+  // Dynamic SEO Page Title & Meta Description updater for Google indexing
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    if (currentView === 'game-detail' && selectedGame) {
+      document.title = `${selectedGame.title} - Play Free Online Game | TS Game Zone free online game site`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          `Play ${selectedGame.title} 100% free online on TS Game Zone! ${selectedGame.description.slice(0, 130)}... Earn coins and play free without download.`
+        );
+      }
+    } else if (currentView === 'categories') {
+      const catName = selectedCategory ? selectedCategory.toUpperCase() : 'All';
+      document.title = `Free Online ${catName} Games - TS Game Zone free online game site`;
+    } else if (currentView === 'search') {
+      document.title = `Search "${searchQuery}" Games - TS Game Zone free online game site`;
+    } else if (currentView === 'all-games') {
+      document.title = `All 100% Free Online Games & Mobile Games - TS Game Zone`;
+    } else if (currentView === 'favorites') {
+      document.title = `My Favorite Free Online Games - TS Game Zone`;
+    } else {
+      document.title = `TS Game Zone - Free Online Games | Play Best Online Games, Mobile Games, Video Games, Free Fire, PUBG, Ludo, Snake & Free Entertainment Game Site Ts Game Zone`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'TS Game Zone is the best free online game site! Play 100% free online games, mobile games, video games, online free fire game, online pubg, Minecraft mobile games, car racing, ludo, snake game, boys game & girls game with zero downloads. Free entertainment gaming site in Bangladesh, India, UK, USA.'
+        );
+      }
+    }
+  }, [currentView, selectedGame, selectedCategory, searchQuery]);
+
   // Sync favorites
   const handleToggleFavorite = (gameId: string) => {
     setFavorites((prev) => {

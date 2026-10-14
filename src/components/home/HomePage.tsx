@@ -269,64 +269,101 @@ export const HomePage: React.FC<Props> = ({
         </div>
       </section>
 
-      {/* SEO Popular Search Tags Cloud (Exact user requested keywords for Google Search Indexing) */}
+      {/* SEO Popular Search Topics & Editorial Guide for Search Engine Ranking */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">
-              Popular Search Topics & Gaming Keywords (TS Game Zone)
-            </span>
-          </div>
-          <p className="text-xs text-slate-500 mb-4 leading-relaxed">
-            Find the best trending free online games across all categories in Bangladesh, India, UK, USA and worldwide.
-          </p>
-
-          <div className="flex flex-wrap gap-2 text-xs text-slate-600">
-            {[
-              'Online games',
-              'free online games',
-              'best online games',
-              'games',
-              'video games',
-              'mobile games',
-              'free fire game',
-              'online free fire game',
-              'online free fire',
-              'online pubg',
-              'pubg',
-              'free fire',
-              'Minecraft',
-              'Minecraft mobile game',
-              'play free online games',
-              'online games free fire',
-              'online games for PC',
-              'boys game',
-              'girls game',
-              'online game paisa',
-              'play game',
-              'online game app',
-              'best online games for mobile',
-              'best online game Bangladesh',
-              'best online game India',
-              'United Kingdom game',
-              'United status game',
-              'online game ludo',
-              'online game site',
-              'free online game site',
-              'free entertainment online game',
-              'game game',
-              'online game',
-              'snake game',
-              'TS Game Zone',
-              'ts game zone',
-            ].map((tag, idx) => (
-              <span
-                key={idx}
-                className="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-slate-700 transition-colors border border-slate-200/60"
-              >
-                #{tag}
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                SEO &amp; Gaming Directory
               </span>
-            ))}
+            </div>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-display">
+              TS Game Zone: Best Free Online Games &amp; Mobile Gaming Site
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Welcome to <strong>TS Game Zone</strong> (ts game zone) — your ultimate free online game site and entertainment gaming hub! Whether you are looking for free online games for PC, action-packed mobile games, online Free Fire games, PUBG tactical battles, Minecraft mobile world builders, fast-paced neon car racing, online game Ludo, or classic snake games, TS Game Zone has it all. Every game is 100% free to play directly in your web browser with zero downloads required.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 border-t border-slate-100 text-xs text-slate-600">
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center gap-1.5 text-xs">
+                <span>🎮</span> Free Online Games for PC &amp; Mobile
+              </h3>
+              <p className="leading-relaxed text-slate-500">
+                Play boys games and girls games instantly on any device. Fully optimized touch controls for Android and iPhone, with smooth keyboard controls for PC players.
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center gap-1.5 text-xs">
+                <span>🪙</span> Real Gameplay Coins &amp; Rewards
+              </h3>
+              <p className="leading-relaxed text-slate-500">
+                All players start with 0 coins. Earn real coins on every goal scored, level completed, or victory achieved. No demo coins — your skills determine your rewards!
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center gap-1.5 text-xs">
+                <span>🌍</span> Worldwide Free Entertainment
+              </h3>
+              <p className="leading-relaxed text-slate-500">
+                Rated as top free entertainment online game site across Bangladesh, India, United Kingdom, United States, and worldwide. Fast loading and responsive on all connections.
+              </p>
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-slate-100">
+            <div className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2.5">
+              Popular Search Keywords &amp; Tags:
+            </div>
+            <div className="flex flex-wrap gap-1.5 text-xs text-slate-600">
+              {[
+                'Online games',
+                'free online games',
+                'best online games',
+                'games',
+                'video games',
+                'mobile games',
+                'free fire game',
+                'online free fire game',
+                'online free fire',
+                'online pubg',
+                'pubg',
+                'free fire',
+                'Minecraft',
+                'Minecraft mobile game',
+                'play free online games',
+                'online games free fire',
+                'online games for PC',
+                'boys game',
+                'girls game',
+                'online game paisa',
+                'play game',
+                'online game app',
+                'best online games for mobile',
+                'best online game Bangladesh',
+                'best online game India',
+                'United Kingdom game',
+                'United status game',
+                'online game ludo',
+                'online game site',
+                'free online game site',
+                'free entertainment online game',
+                'game game',
+                'online game',
+                'snake game',
+                'TS Game Zone',
+                'ts game zone',
+              ].map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-slate-700 transition-colors border border-slate-200/60 text-[11px]"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
