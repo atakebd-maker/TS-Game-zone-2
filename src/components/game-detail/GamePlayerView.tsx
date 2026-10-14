@@ -34,6 +34,7 @@ import { ExternalEmbedPlayer } from '../games/ExternalEmbedPlayer';
 import { GameThumbnail } from '../common/GameThumbnail';
 import { sound } from '../../utils/audio';
 import { playerWallet } from '../../utils/wallet';
+import { AdBanner } from '../ads/AdBanner';
 
 interface Props {
   game: GameItem;
@@ -200,6 +201,13 @@ export const GamePlayerView: React.FC<Props> = ({
         </div>
       </div>
 
+      {/* Top Game Leaderboard Ad requested by user */}
+      {!isFullscreen && (
+        <div className="mb-4 flex justify-center w-full">
+          <AdBanner format="728x90" label="Sponsored Banner" />
+        </div>
+      )}
+
       {/* Main Game Stage / Theater Container */}
       <div
         ref={playerContainerRef}
@@ -306,6 +314,13 @@ export const GamePlayerView: React.FC<Props> = ({
             <Play className="w-4 h-4 fill-current" />
             <span>PLAY NOW</span>
           </button>
+        </div>
+      )}
+
+      {/* Below Game Stage Ad Banner requested by user */}
+      {!isFullscreen && (
+        <div className="my-6 flex justify-center w-full">
+          <AdBanner format="728x90" label="Advertisement" />
         </div>
       )}
 
@@ -431,6 +446,13 @@ export const GamePlayerView: React.FC<Props> = ({
           </div>
         </div>
       </div>
+
+      {/* Mid-content Ad Banner requested by user */}
+      {!isFullscreen && (
+        <div className="mt-8 mb-4 flex justify-center w-full">
+          <AdBanner format="468x60" label="Sponsored Partner" />
+        </div>
+      )}
 
       {/* Recommended & Similar Games Row */}
       {similarGames.length > 0 && (

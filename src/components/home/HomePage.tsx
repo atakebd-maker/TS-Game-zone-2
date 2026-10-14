@@ -3,6 +3,7 @@ import { GameItem, CategoryInfo } from '../../types';
 import { HeroSection } from './HeroSection';
 import { GameCard } from '../common/GameCard';
 import { CategoryCard } from '../common/CategoryCard';
+import { AdBanner } from '../ads/AdBanner';
 import { Sparkles, Flame, Clock, Trophy, Grid, ArrowRight, ShieldCheck } from 'lucide-react';
 
 interface Props {
@@ -43,15 +44,10 @@ export const HomePage: React.FC<Props> = ({
         onBrowseAll={onBrowseAll}
       />
 
-      {/* Discrete Sponsored Advertising Banner (Monetization readiness, separated from game controls) */}
+      {/* Real Monetization Advertising Banner requested by user */}
       {showSponsoredAds && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-dashed border-slate-300 bg-slate-100/60 p-3 text-center text-xs text-slate-500">
-            <span className="font-semibold text-slate-400 uppercase tracking-widest text-[10px] mr-2">
-              Sponsored
-            </span>
-            <span>Premium High-Speed Cloud Gaming Partner Showcase</span>
-          </div>
+          <AdBanner format="728x90" label="Sponsored Banner" />
         </div>
       )}
 
@@ -178,6 +174,11 @@ export const HomePage: React.FC<Props> = ({
           })}
         </div>
       </section>
+
+      {/* Mid-Page Monetization Banner requested by user */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <AdBanner format="468x60" label="Advertisement" />
+      </div>
 
       {/* 6. Popular Games */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -19,6 +19,7 @@ import {
   ResponsibleGamingPage,
 } from './components/pages/StaticPages';
 import { CoinRewardToast } from './components/common/CoinRewardToast';
+import { AdBanner } from './components/ads/AdBanner';
 import { Sparkles, X } from 'lucide-react';
 
 export default function App() {
@@ -282,6 +283,11 @@ export default function App() {
         currentView={currentView}
       />
 
+      {/* Top of Website Ad Banner requested by user */}
+      <div className="w-full bg-white border-b border-slate-100 py-1.5 flex justify-center shadow-2xs">
+        <AdBanner format="468x60" label="Sponsored Banner" className="my-0" />
+      </div>
+
       {/* Main Content Area */}
       <main className="flex-1">
         {currentView === 'home' && (
@@ -370,6 +376,11 @@ export default function App() {
         {currentView === 'terms' && <TermsPage />}
         {currentView === 'responsible' && <ResponsibleGamingPage />}
       </main>
+
+      {/* Very Bottom of Website Ad Banner requested by user */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-2 flex justify-center w-full">
+        <AdBanner format="728x90" label="Advertisement" />
+      </div>
 
       {/* Footer */}
       <Footer
